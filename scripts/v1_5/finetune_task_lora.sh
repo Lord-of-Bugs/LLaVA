@@ -5,7 +5,7 @@ deepspeed llava/train/train_mem.py \
     --deepspeed ./scripts/zero3_offload.json \
     --model_name_or_path /home/llm-hackathon/LLaVA/llava-v1.5-13b \
     --version v1 \
-    --data_path /home/llm-hackathon/LLaVA/playground/old-data/train_patient_finding_impression.json \
+    --data_path /home/llm-hackathon/LLaVA/muchan/patient_finding_impression.json \
     --image_folder /data/UCSD_cxr/jpg/ \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
@@ -15,7 +15,7 @@ deepspeed llava/train/train_mem.py \
     --image_aspect_ratio pad \
     --group_by_modality_length True \
     --bf16 True \
-    --output_dir ./checkpoints/llava-v1.5-13b-02-04-24-task-lora \
+    --output_dir ./checkpoints/llava-v1.5-13b-02-11-24-task-lora \
     --num_train_epochs 1 \
     --per_device_train_batch_size 16 \
     --per_device_eval_batch_size 4 \
